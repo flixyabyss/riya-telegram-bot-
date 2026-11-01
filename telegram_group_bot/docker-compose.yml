@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  riya-bot:
+    build: .
+    container_name: riya_telegram_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
